@@ -1,0 +1,27 @@
+{
+  "name": "accessibleos",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "bootstrap": "pnpm -w install",
+    "dev": "concurrently \"pnpm --filter ./packages/backend run dev\" \"pnpm --filter ./packages/web run dev\" \"pnpm --filter ./packages/mobile start\" --success first",
+    "lint": "pnpm -w run lint",
+    "dev:backend": "pnpm --filter ./packages/backend run dev",
+    "dev:web": "pnpm --filter ./packages/web run dev",
+    "dev:mobile": "pnpm --filter ./packages/mobile start"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.3.0",
+    "concurrently": "^8.2.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.9.2"
+  }
+}
