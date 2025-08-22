@@ -9,9 +9,8 @@ import Footer from './components/Footer/Footer';
 import InteractiveIcon from './components/icons/InteractiveIcon';
 import AccessibilityIcon from './components/icons/AccessibilityIcon';
 import RightArrowIcon from './components/icons/RightArrowIcon';
-import './App.css';
 
-function App() {
+function AccessibleOSLanding() {
   return (
     <div className="App">
       <Header />
@@ -113,4 +112,4 @@ function App() {
   );
 }
 
-export default App;
+export default AccessibleOSLanding;
