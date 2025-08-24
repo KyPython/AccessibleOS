@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import LogoIcon from '../icons/LogoIcon';
 import DropdownArrowIcon from '../icons/DropdownArrowIcon';
 import styles from './Header.module.css';
@@ -11,10 +12,17 @@ const Header: React.FC = () => {
       <div className={styles.container}>
         <nav className={styles.nav}>
           <div className={styles.navLeft}>
-            <a href="#" className={styles.navLink}>Home Page</a>
-            <a href="#" className={styles.navLink}>Features</a>
+            <Link to="/" className={styles.navLink}>
+              Home Page
+            </Link>
+            <Link to="/" className={styles.navLink}>
+              Features
+            </Link>
+            <Link to="/tasks" className={styles.navLink}>
+              Tasks
+            </Link>
             <div className={styles.dropdown}>
-              <button 
+              <button
                 className={styles.dropdownTrigger}
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
               >
@@ -23,21 +31,25 @@ const Header: React.FC = () => {
               </button>
               {isDropdownOpen && (
                 <div className={styles.dropdownMenu}>
-                  <a href="#" className={styles.dropdownItem}>Support</a>
-                  <a href="#" className={styles.dropdownItem}>Blog</a>
-                  <a href="#" className={styles.dropdownItem}>Contact Us</a>
+                  <a href="#" className={styles.dropdownItem}>
+                    Support
+                  </a>
+                  <a href="#" className={styles.dropdownItem}>
+                    Blog
+                  </a>
+                  <a href="#" className={styles.dropdownItem}>
+                    Contact Us
+                  </a>
                 </div>
               )}
             </div>
           </div>
-          
+
           <div className={styles.logo}>
             <LogoIcon width={70} height={36} color="#000000" />
           </div>
-          
-          <button className={styles.menuButton}>
-            Menu
-          </button>
+
+          <button className={styles.menuButton}>Menu</button>
         </nav>
       </div>
     </header>

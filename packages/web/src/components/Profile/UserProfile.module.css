@@ -1,0 +1,170 @@
+.userProfile {
+  padding: var(--space-6);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.header {
+  margin-bottom: var(--space-8);
+}
+
+.header h2 {
+  margin: 0 0 var(--space-2) 0;
+}
+
+.header p {
+  margin: 0;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-8);
+  color: var(--text-secondary);
+}
+
+.profileCard {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  gap: var(--space-6);
+  align-items: flex-start;
+}
+
+.avatarSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  flex-shrink: 0;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: var(--radius-full);
+  background: var(--bg-secondary);
+  border: 3px solid var(--border-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color: var(--text-secondary);
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.changeAvatar {
+  font-size: var(--font-size-sm);
+  gap: var(--space-1);
+}
+
+.profileInfo {
+  flex: 1;
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.infoItem {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.infoLabel {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+}
+
+.infoValue {
+  color: var(--text-primary);
+  font-size: var(--font-size-base);
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+}
+
+.status.active {
+  background: var(--color-success-light);
+  color: var(--color-success-dark);
+}
+
+.status.inactive {
+  background: var(--color-error-light);
+  color: var(--color-error-dark);
+}
+
+.actions {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.editForm {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.formActions {
+  display: flex;
+  gap: var(--space-3);
+  justify-content: flex-end;
+  margin-top: var(--space-4);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--border-primary);
+}
+
+/* High contrast mode adjustments */
+[data-theme="high-contrast"] .profileCard {
+  border: 2px solid var(--border-primary);
+}
+
+[data-theme="high-contrast"] .avatar {
+  border: 3px solid var(--border-primary);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .userProfile {
+    padding: var(--space-4);
+  }
+  
+  .profileCard {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: var(--space-4);
+  }
+  
+  .infoGrid {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+  }
+  
+  .formActions {
+    flex-direction: column-reverse;
+  }
+}
