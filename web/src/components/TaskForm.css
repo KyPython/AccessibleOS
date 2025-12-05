@@ -1,0 +1,63 @@
+.form-group {
+  margin-bottom: var(--spacing-lg);
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: var(--spacing-xs);
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  max-width: 600px;
+}
+
+.help-text {
+  display: block;
+  font-size: 0.875rem;
+  color: var(--color-text-light);
+  margin-top: var(--spacing-xs);
+}
+
+fieldset {
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+}
+
+legend {
+  font-weight: 500;
+  padding: 0 var(--spacing-sm);
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: auto;
+  margin: 0;
+}
+
+.checkbox-group label {
+  margin: 0;
+  font-weight: normal;
+}
+
+.form-actions {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-xl);
+}
+
+.form-actions button {
+  padding: var(--spacing-sm) var(--spacing-lg);
+}
+
